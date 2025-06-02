@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'functions.php';
 
 if (isset($_POST["register"])) {
     if (registration($_POST) > 0) {
@@ -20,9 +20,17 @@ if (isset($_POST["register"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
+
+    <link rel="stylesheet" href="css/regist-style.css">
 </head>
 <body>
     <h1>Registration!</h1>
+
+    <!-- Ombak animasi di bawah -->
+<div class="wave-container">
+  <div class="wave"></div>
+</div>
+
 
 <div class="reg">
     <table>

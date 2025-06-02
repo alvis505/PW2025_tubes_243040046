@@ -1,0 +1,218 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY - Laut biru cerah */
+body {
+  background: linear-gradient(to bottom, #a0d8f7, #5aa9e6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px 120px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Judul */
+h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 6px #0a3d62;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* FORM CONTAINER */
+.reg {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  z-index: 10;
+}
+
+/* TABLE FORM */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* LABEL */
+label {
+  color: #054a91;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 6px; /* kasih jarak bawah supaya gak terlalu rapat ke input */
+}
+
+/* INPUT */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0 22px 0; /* kasih jarak bawah lebih lega */
+  border: 2px solid #7bb1e3;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+  background-color: #d7e9fb;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #2a6ebb;
+  background-color: #c3d9f8;
+}
+
+/* BUTTON */
+button {
+  background: #2a6ebb;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(42, 110, 187, 0.6);
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #1c4f8a;
+  transform: scale(1.05);
+}
+
+/* ANIMASI OMBAK BAWAH */
+@keyframes waveAnimation {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* Ombak - bentuk dan animasi */
+.wave-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 150px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.6;
+}
+
+.wave {
+  width: 200%;
+  height: 150px;
+  background: url('https://i.ibb.co/ZVh01dm/wave-light-blue.png') repeat-x;
+  background-size: cover;
+  animation: waveAnimation 30s linear infinite;
+}
+
+/* RESPONSIVE */
+
+/* MOBILE: max-width 480px */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px 120px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .reg {
+    padding: 20px 25px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    margin-bottom: 18px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* TABLET: 481px sampai 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding: 30px 15px 120px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  .reg {
+    max-width: 90%;
+    padding: 25px 30px;
+  }
+
+  label {
+    font-size: 1.05rem;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 11px 22px;
+  }
+}
+
+/* DESKTOP BESAR: 769px ke atas */
+@media (min-width: 769px) {
+  body {
+    padding: 40px 20px 120px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .reg {
+    max-width: 400px;
+    padding: 30px 40px;
+  }
+
+  label {
+    font-size: 1.1rem;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    margin-bottom: 22px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+}
