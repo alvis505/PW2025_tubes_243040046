@@ -51,8 +51,7 @@ if (!isset($_SESSION["login"])) {
         
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-5" type="search" disabled placeholder="Search" id="keyword" aria-label="Search"/>
       </form>
     </div>
   </div>

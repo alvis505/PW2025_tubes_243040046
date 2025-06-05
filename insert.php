@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     } else {
         echo "<script>
             alert('Data gagal ditambahkan');
-            document.location.href = 'update.php';
+            document.location.href = 'insert.php';
         </script>";
         exit;
     }

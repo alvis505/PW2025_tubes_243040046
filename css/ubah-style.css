@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body dan layout */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+}
+
+/* Table sebagai container form */
+table {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 480px;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+}
+
+/* Baris */
+tr {
+}
+
+/* Label di kolom pertama */
+td:first-child {
+    padding-right: 1rem;
+    vertical-align: middle;
+    text-align: right;
+    font-weight: 600;
+    width: 30%;
+    color: #555;
+}
+
+/* Input di kolom kedua */
+td:nth-child(2) {
+    width: 70%;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1.8px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    border-color: #5c7cfa;
+    outline: none;
+}
+
+/* Gambar preview */
+img {
+    max-width: 500px;       /* diperbesar */
+    max-height: 300px;      /* diperbesar */
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 1rem;
+    vertical-align: middle;
+    box-shadow: 0 0 8px rgba(92, 124, 250, 0.7); /* shadow warna biru muda */
+    border: 3px solid #5c7cfa;  /* border warna biru */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(92, 124, 250, 1);
+}
+
+
+/* Button */
+button {
+    background-color: #5c7cfa;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+button:hover,
+button:focus {
+    background-color: #4058c0;
+    outline: none;
+}
+
+/* Agar button td berada di bawah */
+tr:last-child td {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+

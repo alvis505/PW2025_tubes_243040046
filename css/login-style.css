@@ -1,9 +1,14 @@
-/* RESET */
+/* Reset */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* BACKGROUND ANIMATED ABSTRACT */
@@ -150,45 +155,6 @@ body::after {
 @keyframes floatBlob {
   0%, 100% { transform: translate(0, 0); }
   50% { transform: translate(30px, -30px); }
-}
-
-/* RESPONSIVE */
-
-/* MOBILE */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  table {
-    padding: 20px;
-  }
-
-  button {
-    width: 100%;
-  }
-}
-
-/* TABLET */
-@media (min-width: 481px) and (max-width: 768px) {
-  h1 {
-    font-size: 2.6rem;
-  }
-
-  table {
-    max-width: 90%;
-  }
-}
-
-/* DESKTOP BESAR */
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 3.2rem;
-  }
-
-  table {
-    max-width: 420px;
-  }
 }
 
 

@@ -7,7 +7,8 @@ $query = ("SELECT * FROM art
               name LIKE '%$keyword%' OR
               date LIKE '%$keyword%'
              ");
-$art = query($query);
+$arts = query($query);
+
 
 ?>
 
@@ -22,18 +23,19 @@ $art = query($query);
         </tr>
 
         <?php $i = 1;?>
-        <?php foreach($art as $row) : ?>
+        <?php foreach($arts as $art) : ?>
             <tr>
                 <td> <?= $i++ ; ?> </td>
                 <td> 
-                    <a href="update.php?id=<?= $row["id"];?>"> Change </a> |
-                    <a href="delete.php?id=<?= $row["id"];?>" onclick="return confirm('Are you sure want delete this data?');"> Delete   </a>
+                    <a href="update.php?id=<?= $art["id"];?>"> Change </a> |
+                    <a href="delete.php?id=<?= $art["id"];?>" onclick="return confirm('Are you sure want delete this data?');"> Delete   </a>
                 </td>
-                <td> <img src="img/<?= $row["image"];?>" alt=""> </td>
-                <td> <?= $row["name"]; ?> </td>
-                <td> <?= $row["date"]; ?> </td>
+                <td> <img src="img/<?= $art["image"];?>" alt=""> </td>
+                <td> <?= $art["name"]; ?> </td>
+                <td> <?= $art["date"]; ?> </td>
             </tr>
         <?php endforeach ; ?>
 
         <script src="js/script.js"></script>
     </table>
+

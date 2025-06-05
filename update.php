@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
     if ( update($_POST) > 0) {
         echo "<script>
         alert('data berhasil di ubah')
-        document.location.href = 'index.php';
+        document.location.href = 'admin.php';
         </script>
         ";
     } else {
@@ -44,7 +44,7 @@ if (isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="css/update-style.css">
+    <link rel="stylesheet" href="css/ubah-style.css">
 </head>
 <body>
     <h1>Update Data</h1>
@@ -54,7 +54,8 @@ if (isset($_POST["submit"])) {
 
         <input type="hidden"  name="id" id="id" value="<?= $mhs["id"]?>">
         <input type="hidden"  name="oldImage" id="oldImage" value="<?= $mhs["image"]?>">
-           <tr>
+
+        <tr>
             <td> <label for="name">name</label></td>
             <td> <input type="text" name="name" id="name" required value="<?= $mhs["name"]?>"></td>
         </tr>

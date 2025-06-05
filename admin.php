@@ -56,11 +56,13 @@ if (isset($_POST["search"])) {
     <a href="insert.php" class="text-warning bg-white"><i class="bi bi-database-add text-warning"></i></a>
     <br><br>
 
-    <!-- SEARCH -->
+    <!-- SEARCH -//////////////////////////////////////////////////////////////////-->
     <form action="" method="post">
-        <input type="text" name="keyword" autofocus placeholder="search" autocomplete="off" id="keyword">
+        <input type="text" name="keyword" autofocus 
+        placeholder="search" autocomplete="off" id="keyword">
         <button type="submit" name="search" id="search"> search </button>
     </form>
+    <!-- ///////////////////////////////////////////////////////////////////////////// -->
     <br><br>
 
     <!-- navigasi -->
@@ -83,7 +85,7 @@ if (isset($_POST["search"])) {
 </div>
 
      <br>
-     <div class="container">
+     <div class="container" id="container">
      <table border="1" cellpadding="10" cellspacing="0" >
 
         <tr>

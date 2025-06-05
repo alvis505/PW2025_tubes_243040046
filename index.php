@@ -35,8 +35,7 @@
         
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-5" type="search" disabled placeholder="Search" id="keyword" aria-label="Search"/>
       </form>
     </div>
   </div>
@@ -57,9 +56,19 @@
         and sparks imagination. It connects people, preserves history, and inspires change.
       </p>
     </div>
+<br><br><br>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container container">
+    <div class="footer-left">
+      <p>&copy; 2025 Nama Perusahaan. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
   </section>
-</p>
-</div>
+
+
+
 
 </body>
 </html>

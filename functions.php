@@ -75,7 +75,7 @@ function delete($id) {
 function update($data) {
     global $conn;
    
-    $id = (int)$data["id"];
+    $id = $data["id"];
     $name = htmlspecialchars($data["name"]);
     $date = htmlspecialchars($data["date"]);
     $oldImage = htmlspecialchars($data["oldImage"]);

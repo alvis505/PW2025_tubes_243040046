@@ -28,17 +28,6 @@ if (isset($_POST["register"])) {
 <body>
     <h1>Registration!</h1>
 
-<!-- Awan -->
-<div class="cloud cloud1"></div>
-<div class="cloud cloud2"></div>
-<!-- Awan bergerak dari kiri ke kanan -->
-<div class="cloud cloud1"></div>
-<div class="cloud cloud3"></div>
-
-<!-- Awan bergerak dari kanan ke kiri -->
-<div class="cloud cloud2"></div>
-<div class="cloud cloud4"></div>
-
 
 
 <div class="reg">

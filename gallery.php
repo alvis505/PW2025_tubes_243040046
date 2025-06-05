@@ -55,8 +55,7 @@ $arts = query("SELECT * FROM art LIMIT $awalData, $jumlahDataPerHalaman");
         
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-5" type="search" placeholder="Search" id="keyword" aria-label="Search"/>
       </form>
     </div>
   </div>
@@ -88,7 +87,7 @@ $arts = query("SELECT * FROM art LIMIT $awalData, $jumlahDataPerHalaman");
 </div><br>
 
 
-  <section class="gallery">
+  <section class="gallery" id="container">
     <?php foreach($arts as $art) : ?>
     <div class="gallery-item">
       <img src="img/<?= $art["image"]; ?>" alt="Art 1" />
@@ -98,5 +97,7 @@ $arts = query("SELECT * FROM art LIMIT $awalData, $jumlahDataPerHalaman");
     </div>
     <?php endforeach; ?>
   </section>
+
+  <script src="js/script-gallery.js"></script>
 </body>
 </html>
