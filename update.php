@@ -7,63 +7,76 @@ if (!isset($_SESSION["login"])) {
     exit;
 }
 
-require 'functions.php'; // pastikan ini file yang berisi fungsi tambah(), upload(), dll
+require 'functions.php';
 
-// Proses submit form
-if (isset($_POST['submit'])) {
-    if (update($_POST) > 0) {
+
+//ambil id di url
+$id = $_GET["id"];
+// var_dump($id);
+
+//query mahasiswa berdasarkan id
+$mhs = query("SELECT * FROM art WHERE id = $id")[0];  //0 untuk array numerik terluar
+// var_dump($mhs);
+
+
+if (isset($_POST["submit"])) {
+
+    if ( update($_POST) > 0) {
         echo "<script>
-            alert('Data berhasil ditambahkan');
-            document.location.href = 'index.php';
-        </script>";
-        exit;
+        alert('data berhasil di ubah')
+        document.location.href = 'index.php';
+        </script>
+        ";
     } else {
         echo "<script>
-            alert('Data gagal ditambahkan');
-            document.location.href = 'tambah.php';
-        </script>";
-        exit;
+        alert('data berhasil di ubah')
+        </script>
+        ";
     }
 }
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Tambah Data Mahasiswa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css/update-style.css">
 </head>
 <body>
+    <h1>Update Data</h1>
 
-<h1>UPDATE DATA</h1>
+    <table>
+        <form action="" method="post" enctype="multipart/form-data">
 
-<form action="" method="post" enctype="multipart/form-data">
-    <ul>
-        <li>
-            <label for="name">name :</label>
-            <input type="text" name="name" id="name" required />
-        </li>
-        <li>
-            <label for="creation">creation :</label>
-            <input type="text" name="creation" id="creation" required />
-        </li>
-        <li>
-            <label for="from">from :</label>
-            <input type="text" name="from" id="from" required />
-        </li>
-        <li>
-            <label for="date_created">date created :</label>
-            <input type="text" name="date_created" id="date_created" required />
-        </li>
-        <li>
-            <label for="image">image :</label>
-            <input type="file" name="image" id="image" required />
-        </li>
-        <li>
-            <button type="submit" name="submit">Update Data!</button>
-        </li>
-    </ul>
-</form>
+        <input type="hidden"  name="id" id="id" value="<?= $mhs["id"]?>">
+        <input type="hidden"  name="oldImage" id="oldImage" value="<?= $mhs["image"]?>">
+           <tr>
+            <td> <label for="name">name</label></td>
+            <td> <input type="text" name="name" id="name" required value="<?= $mhs["name"]?>"></td>
+        </tr>
 
+        <tr>
+            <td><label for="date">date</label></td>
+            <td><input type="text" name="date" id="date" value="<?= $mhs["date"]?>"></td>
+        </tr>
+
+        <tr>
+            <td> <label for="image">image</label></td>
+            <img src="img/<?= $mhs["image"]?>" alt="">
+            <td> <input type="file" name="image" id="image"></td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit" name="submit">update data</button>
+            </td>
+        </tr>
+        </form>
+    </table>
+    
 </body>
 </html>

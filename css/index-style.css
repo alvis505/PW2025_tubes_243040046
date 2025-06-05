@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.navbar{
+  position: fixed;
+}
+
+.hero {
+  min-height: 100vh; /* Full screen height */
+  padding: 80px 20px;
+  background-image:url(tiedye.webp);
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero .title {
+  font-size: 12rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+
+}
+
+.hero .description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

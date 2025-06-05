@@ -2,9 +2,11 @@
 require 'functions.php';
 
 if (isset($_POST["register"])) {
-    if (registration($_POST) > 0) {
+    if(registration($_POST) > 0) {
         echo "<script>
         alert('user berhasil di buat!');
+        document.location.href = 'login.php';
+        </script>
         ";
     } else {
         echo mysqli_error($conn);
@@ -26,10 +28,17 @@ if (isset($_POST["register"])) {
 <body>
     <h1>Registration!</h1>
 
-    <!-- Ombak animasi di bawah -->
-<div class="wave-container">
-  <div class="wave"></div>
-</div>
+<!-- Awan -->
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<!-- Awan bergerak dari kiri ke kanan -->
+<div class="cloud cloud1"></div>
+<div class="cloud cloud3"></div>
+
+<!-- Awan bergerak dari kanan ke kiri -->
+<div class="cloud cloud2"></div>
+<div class="cloud cloud4"></div>
+
 
 
 <div class="reg">
@@ -38,21 +47,25 @@ if (isset($_POST["register"])) {
         <form action="" method="post">
             <tr>
                 <td><label for="username">username :</label></td>
-                <td><input type="text" name="username" id="username" require></td>
+                <td><input type="text" name="username" id="username" required></td>
             </tr>
 
             <tr>
                 <td><label for="password">password :</label></td>
-                <td><input type="password" name="password" id="password" require></td>
+                <td><input type="password" name="password" id="password" required></td>
             </tr>
 
             <tr>
                 <td><label for="password2">confirm password :</label></td>
-                <td><input type="password" name="password2" id="password2" require></td>
+                <td><input type="password" name="password2" id="password2" required></td>
             </tr>
 
             <tr>
                 <td><button type="submit" name="register">Register</button></td>
+            </tr>
+
+            <tr>
+                <a href="login.php">Already have an account? Click here</a>
             </tr>
         </form>
     </div>

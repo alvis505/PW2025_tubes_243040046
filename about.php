@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <link rel="stylesheet" href="css/index-style.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/about-style.css">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 </head>
 <body>
-
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; width: 100%; z-index: 1000; top:0;">
   <div class="container-fluid">
     <a class="navbar-brand" href="logout2.php">ART</a>
@@ -42,24 +41,26 @@
   </div>
 </nav>
 <!-- ////////////////////////////////////////////////////////////////////////// -->
-    
- <section class="hero">
-    <div class="container text-center">
-      <h1 class="title">What is Art?</h1>
-      <p class="description">
-        Art is a form of expression that transcends language, time, and culture. 
-        It encompasses a diverse range of human activities, from painting and sculpture 
-        to music, literature, dance, and digital creations. Art reflects emotions, 
-        thoughts, and the human experience, inviting us to see the world through a different lens.
-      </p>
-      <p class="description">
-        Whether abstract or realistic, ancient or modern, art challenges perceptions 
-        and sparks imagination. It connects people, preserves history, and inspires change.
+<br><br><br>
+ <header>
+    <h1>Here I am</h1>
+  </header>
+
+  <main>
+    <img src="img/6840a7a856025.webp" alt="Foto Profil Rhienon" class="profile-pic" />
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, eos 
+        maiores nam earum id nemo voluptatibus ea dolore nostrum magni? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
+        vitae sint officiis provident? Iure, dolore dolorum nam ex sequi explicabo.
       </p>
     </div>
-  </section>
-</p>
-</div>
+  </main>
 
+  <footer>
+    &copy; 2025 myArt. All rights reserved.
+  </footer>
+    
 </body>
 </html>

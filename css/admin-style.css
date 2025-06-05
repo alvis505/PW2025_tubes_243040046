@@ -1,0 +1,280 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body */
+body {
+  background: linear-gradient(135deg, #e0e7ff, #f9faff);
+  padding: 30px 15px;
+  min-height: 100vh;
+}
+
+/* Container */
+body > * {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3a3a6d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Links */
+a {
+  color: #4a4a7a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1a1a40;
+}
+
+/* Logout link top right */
+a[href="logout.php"] {
+  float: right;
+  font-size: 0.9rem;
+  background: #f44336;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+a[href="logout.php"]:hover {
+  background: #b33027;
+}
+
+/* Add data link */
+a[href="insert.php"] {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 18px;
+  background-color: #4a4a7a;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgb(74 74 122 / 0.4);
+  transition: background-color 0.3s ease;
+}
+
+a[href="insert.php"]:hover {
+  background-color: #2f2f56;
+}
+/* //pagination  */
+/* Container navigasi pagination supaya rapi dan center */
+.pagination {
+  margin: 25px 0 40px;
+  text-align: center;
+  user-select: none;
+}
+
+/* Style link pagination */
+.pagination a {
+  display: inline-block;
+  margin: 0 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #cbd5ff;
+  font-weight: 600;
+  text-decoration: none;
+  color: #4a4a7a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover efek */
+.pagination a:hover {
+  background-color: #4a4a7a;
+  color: white;
+}
+
+/* Active page styling */
+.pagination a.active-page {
+  background-color: #f44336;
+  color: white;
+  border-color: #b33027;
+  cursor: default;
+}
+
+/* Disable pointer events for active page so no click */
+.pagination a.active-page:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+
+/* Search form */
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  gap: 8px;
+}
+
+input[type="text"][name="keyword"] {
+  width: 250px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.8px solid #cbd5ff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: #f9faff;
+}
+
+input[type="text"][name="keyword"]:focus {
+  outline: none;
+  border-color: #4a4a7a;
+  background-color: #fff;
+}
+
+button[name="search"] {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4a4a7a;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgb(74 74 122 / 0.4);
+  transition: background-color 0.3s ease;
+}
+
+button[name="search"]:hover {
+  background-color: #2f2f56;
+}
+
+/* Pagination */
+a[href^="?page="], /* all pagination links */
+a[href^="?page="][style] {
+  padding: 6px 12px;
+  margin: 0 3px;
+  border-radius: 6px;
+  border: 1.5px solid #cbd5ff;
+  font-weight: 600;
+  text-decoration: none;
+  color: #4a4a7a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a[href^="?page="]:hover {
+  background-color: #4a4a7a;
+  color: white;
+}
+
+a[href^="?page="][style] {
+  background-color: #f44336 !important;
+  color: white !important;
+  border-color: #b33027 !important;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 8px 30px rgb(0 0 0 / 0.1);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+/* Table header */
+table tr:first-child {
+  background: #4a4a7a;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+table th, table td {
+  padding: 14px 18px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #eee;
+}
+
+table td:nth-child(1) {
+  width: 50px;
+  text-align: center;
+  font-weight: 600;
+  color: #4a4a7a;
+}
+
+table td:nth-child(2) {
+  width: 140px;
+  text-align: center;
+}
+
+table td img {
+  max-width: 80px;
+  max-height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgb(74 74 122 / 0.3);
+}
+
+/* Action links in table */
+table td:nth-child(2) a {
+  margin: 0 6px;
+  font-weight: 600;
+  color: #4a4a7a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+table td:nth-child(2) a:hover {
+  color: #f44336;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body > * {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+
+  a[href="logout.php"] {
+    float: none;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  input[type="text"][name="keyword"] {
+    width: 100%;
+  }
+
+  table td:nth-child(2) {
+    width: auto;
+  }
+
+  table td img {
+    max-width: 60px;
+    max-height: 45px;
+  }
+}

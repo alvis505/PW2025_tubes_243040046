@@ -1,16 +1,32 @@
+<?php
+require 'functions.php';
+
+session_start();
+
+if (!isset($_SESSION["login"])) {
+     echo "<script>
+        if (confirm('Anda belum login. Apakah Anda ingin login sekarang?')) {
+            window.location.href = 'login.php';
+        } else {
+            window.history.back();
+        }
+    </script>";
+    exit;
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <link rel="stylesheet" href="css/index-style.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/contact-style.css">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 </head>
 <body>
-
 <!-- NAVBAR -->
  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; width: 100%; z-index: 1000; top:0;">
   <div class="container-fluid">
@@ -42,24 +58,22 @@
   </div>
 </nav>
 <!-- ////////////////////////////////////////////////////////////////////////// -->
-    
- <section class="hero">
-    <div class="container text-center">
-      <h1 class="title">What is Art?</h1>
-      <p class="description">
-        Art is a form of expression that transcends language, time, and culture. 
-        It encompasses a diverse range of human activities, from painting and sculpture 
-        to music, literature, dance, and digital creations. Art reflects emotions, 
-        thoughts, and the human experience, inviting us to see the world through a different lens.
-      </p>
-      <p class="description">
-        Whether abstract or realistic, ancient or modern, art challenges perceptions 
-        and sparks imagination. It connects people, preserves history, and inspires change.
-      </p>
-    </div>
-  </section>
-</p>
-</div>
+<br><br>
 
+  <main class="form-wrapper">
+    <h1>Contact</h1>
+    <form action="#" method="POST" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
 </body>
 </html>

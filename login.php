@@ -21,7 +21,7 @@ if($key === hash('sha256', $row['username'])) {
 
 //jika sudah login maka tidak perlu untuk ke halaman login
 if(isset($_SESSION['login'])) {
-    header("Location: index.php");
+    header("Location: admin.php");
     exit;
 }
 
@@ -34,7 +34,7 @@ if(isset($_POST["login"])) {
     $username = mysqli_real_escape_string($conn, $_POST["username"]);
     $password = $_POST["password"];
 
-    $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
 
     // Check if username exists in database
     if(mysqli_num_rows($result) === 1) {
@@ -55,6 +55,11 @@ if(isset($_POST["login"])) {
                 setcookie('key', hash('sha256', $row['username']));
                 //id dan key perlu di ganti namanya agar lebih safety
                 // username perlu di hash/acak agar lebih safety
+            }
+
+            if ($username == 'admin' && $password == '123') {
+              header("Location: admin.php");
+              exit;
             }
             
             header("Location: index.php");

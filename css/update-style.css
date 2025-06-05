@@ -1,0 +1,154 @@
+/* Reset dasar dan font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Body dan container tengah */
+body {
+  background: linear-gradient(135deg, #f0f4ff, #d9e3ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 15px;
+}
+
+/* Container form */
+.container {
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Judul form */
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #4a4a7a;
+}
+
+/* Form dan table */
+form {
+  width: 100%;
+}
+
+/* Tabel sebagai layout, beri spasi antar baris */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 22px;
+}
+
+/* Label */
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #333366;
+  vertical-align: top;
+}
+
+/* Cell label (kiri) */
+td:first-child {
+  width: 30%;
+  padding-right: 10px;
+  vertical-align: middle;
+  font-size: 1rem;
+  color: #3a3a6d;
+}
+
+/* Cell input (kanan) */
+td:last-child {
+  vertical-align: middle;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input text dan file */
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.8px solid #cbd5ff;
+  font-size: 1rem;
+  background-color: #f9faff;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+  outline: none;
+  border-color: #4a4a7a;
+  background-color: #fff;
+}
+
+/* Preview gambar */
+td img {
+  max-width: 140px;
+  max-height: 100px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(74, 74, 122, 0.25);
+  align-self: flex-start;
+}
+
+/* Tombol submit */
+button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #4a4a7a;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(74, 74, 122, 0.35);
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #2f2f56;
+}
+
+/* Responsive kecil */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 320px;
+    padding: 25px 20px;
+  }
+
+  td:first-child {
+    width: 35%;
+    font-size: 0.95rem;
+  }
+
+  td img {
+    max-width: 120px;
+    max-height: 85px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}

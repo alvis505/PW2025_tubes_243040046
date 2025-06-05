@@ -1,218 +1,400 @@
-/* RESET */
+/* Reset default */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* BODY - Laut biru cerah */
+/* Sky background with clouds */
 body {
-  background: linear-gradient(to bottom, #a0d8f7, #5aa9e6);
+  background: linear-gradient(to top, #aee1f9, #e3f6ff);
   min-height: 100vh;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 40px 20px 120px;
+  animation: fadeIn 1.5s ease-in;
   position: relative;
-  overflow-x: hidden;
 }
 
-/* Judul */
+/* Title */
 h1 {
-  color: #ffffff;
-  text-shadow: 2px 2px 6px #0a3d62;
-  font-size: 3rem;
-  margin-bottom: 40px;
-  text-align: center;
+  margin-top: 50px;
+  font-size: 2.8rem;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+  animation: slideInTop 1s ease-out;
+  z-index: 2;
 }
 
-/* FORM CONTAINER */
+/* Registration Box */
 .reg {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 30px 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  max-width: 400px;
-  width: 100%;
-  z-index: 10;
+  padding: 2rem;
+  margin: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 90%;
+  max-width: 500px;
+  animation: popUp 0.9s ease;
+  z-index: 2;
 }
 
-/* TABLE FORM */
+.reg:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Table & Form Inputs */
 table {
   width: 100%;
-  border-collapse: collapse;
 }
 
-/* LABEL */
-label {
-  color: #054a91;
-  font-weight: 600;
-  font-size: 1.1rem;
-  display: inline-block;
-  margin-bottom: 6px; /* kasih jarak bawah supaya gak terlalu rapat ke input */
+td {
+  padding: 10px;
+  font-size: 1rem;
+  color: #34495e;
 }
 
-/* INPUT */
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  padding: 10px 12px;
-  margin: 6px 0 22px 0; /* kasih jarak bawah lebih lega */
-  border: 2px solid #7bb1e3;
-  border-radius: 12px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #2980b9;
   outline: none;
-  background-color: #d7e9fb;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
-  border-color: #2a6ebb;
-  background-color: #c3d9f8;
-}
-
-/* BUTTON */
+/* Button */
 button {
-  background: #2a6ebb;
+  background-color: #3498db;
   color: white;
-  font-size: 1.2rem;
-  padding: 12px 25px;
+  padding: 10px 16px;
   border: none;
-  border-radius: 25px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(42, 110, 187, 0.6);
-  transition: background 0.3s ease, transform 0.2s ease;
-  margin-top: 10px;
+  margin-top: 12px;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 button:hover {
-  background: #1c4f8a;
+  background-color: #2980b9;
   transform: scale(1.05);
 }
 
-/* ANIMASI OMBAK BAWAH */
-@keyframes waveAnimation {
+/* Link */
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3498db;
+}
+
+/* Animated Clouds */
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: moveClouds 60s linear infinite;
+  z-index: 0;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud1 {
+  width: 120px;
+  height: 60px;
+  top: 100px;
+  left: -200px;
+}
+
+.cloud1::before {
+  width: 60px;
+  height: 60px;
+  left: 50px;
+  top: -20px;
+}
+
+.cloud1::after {
+  width: 70px;
+  height: 70px;
+  left: 20px;
+  top: -30px;
+}
+
+.cloud2 {
+  width: 150px;
+  height: 70px;
+  top: 200px;
+  left: -300px;
+  animation-duration: 90s;
+}
+
+.cloud2::before {
+  width: 70px;
+  height: 70px;
+  left: 40px;
+  top: -20px;
+}
+
+.cloud2::after {
+  width: 90px;
+  height: 90px;
+  left: 30px;
+  top: -40px;
+}
+
+@keyframes moveClouds {
   0% {
-    background-position-x: 0;
+    left: -200px;
   }
   100% {
-    background-position-x: 1000px;
+    left: 120%;
   }
 }
 
-/* Ombak - bentuk dan animasi */
-.wave-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 200%;
-  height: 150px;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 5;
-  opacity: 0.6;
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.wave {
-  width: 200%;
-  height: 150px;
-  background: url('https://i.ibb.co/ZVh01dm/wave-light-blue.png') repeat-x;
-  background-size: cover;
-  animation: waveAnimation 30s linear infinite;
+@keyframes slideInTop {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVE */
+@keyframes popUp {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
 
-/* MOBILE: max-width 480px */
-@media (max-width: 480px) {
-  body {
-    padding: 20px 10px 120px;
-  }
-
+/* Responsive Layout */
+@media (max-width: 768px) {
   h1 {
     font-size: 2.2rem;
-    margin-bottom: 30px;
   }
 
   .reg {
-    padding: 20px 25px;
+    padding: 1.5rem;
   }
 
-  label {
-    font-size: 1rem;
+  td {
+    display: block;
+    width: 100%;
   }
 
-  input[type="text"],
-  input[type="password"] {
-    margin-bottom: 18px;
+  td label,
+  td input {
+    width: 100%;
+    display: block;
   }
 
   button {
-    font-size: 1rem;
-    padding: 10px 20px;
+    width: 100%;
   }
 }
 
-/* TABLET: 481px sampai 768px */
-@media (min-width: 481px) and (max-width: 768px) {
-  body {
-    padding: 30px 15px 120px;
+@media (max-width: 480px) {
+  .reg {
+    margin: 20px 10px;
   }
 
   h1 {
-    font-size: 2.6rem;
-  }
-
-  .reg {
-    max-width: 90%;
-    padding: 25px 30px;
-  }
-
-  label {
-    font-size: 1.05rem;
-  }
-
-  input[type="text"],
-  input[type="password"] {
-    margin-bottom: 20px;
-  }
-
-  button {
-    font-size: 1.1rem;
-    padding: 11px 22px;
+    font-size: 1.8rem;
   }
 }
 
-/* DESKTOP BESAR: 769px ke atas */
-@media (min-width: 769px) {
-  body {
-    padding: 40px 20px 120px;
-  }
+/* Cloud base */
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+  z-index: 0;
+}
 
-  h1 {
-    font-size: 3rem;
+/* Left to Right Animation */
+@keyframes moveCloudsLeftToRight {
+  0% {
+    left: -200px;
+    opacity: 0;
   }
-
-  .reg {
-    max-width: 400px;
-    padding: 30px 40px;
+  10% {
+    opacity: 0.8;
   }
-
-  label {
-    font-size: 1.1rem;
+  90% {
+    opacity: 0.8;
   }
-
-  input[type="text"],
-  input[type="password"] {
-    margin-bottom: 22px;
-  }
-
-  button {
-    font-size: 1.2rem;
-    padding: 12px 25px;
+  100% {
+    left: 110%;
+    opacity: 0;
   }
 }
+
+/* Right to Left Animation */
+@keyframes moveCloudsRightToLeft {
+  0% {
+    right: -200px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    right: 110%;
+    opacity: 0;
+  }
+}
+
+/* Multiple cloud sizes and positions for variety */
+.cloud1 {
+  width: 120px;
+  height: 60px;
+  top: 80px;
+  animation: moveCloudsLeftToRight 60s linear infinite;
+  animation-delay: 0s;
+}
+
+.cloud1::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  left: 50px;
+  top: -20px;
+}
+
+.cloud1::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  left: 20px;
+  top: -30px;
+}
+
+.cloud2 {
+  width: 150px;
+  height: 70px;
+  top: 150px;
+  animation: moveCloudsRightToLeft 80s linear infinite;
+  animation-delay: 15s;
+  right: -200px;
+}
+
+.cloud2::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  left: 40px;
+  top: -20px;
+}
+
+.cloud2::after {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  left: 30px;
+  top: -40px;
+}
+
+.cloud3 {
+  width: 100px;
+  height: 50px;
+  top: 250px;
+  animation: moveCloudsLeftToRight 70s linear infinite;
+  animation-delay: 30s;
+}
+
+.cloud3::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  left: 40px;
+  top: -20px;
+}
+
+.cloud3::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  left: 15px;
+  top: -25px;
+}
+
+.cloud4 {
+  width: 130px;
+  height: 65px;
+  top: 320px;
+  animation: moveCloudsRightToLeft 65s linear infinite;
+  animation-delay: 45s;
+  right: -200px;
+}
+
+.cloud4::before {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #fff;
+  border-radius: 50%;
+  left: 45px;
+  top: -25px;
+}
+
+.cloud4::after {
+  content: '';
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: #fff;
+  border-radius: 50%;
+  left: 25px;
+  top: -35px;
+}
+
