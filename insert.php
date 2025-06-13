@@ -55,6 +55,10 @@ if (isset($_POST['submit'])) {
             <td><input type="file" name="image" id="image" /></td>
     </tr>
     <tr>
+            <td><label for="des">des :</label></td>
+            <td><input type="text" name="des" id="des" required/></td>
+    </tr>
+    <tr>
             <td><button type="submit" name="submit">Add Data</button></td>
             <td><a href="admin.php" class="back-link"> back </a></td>
     </tr>

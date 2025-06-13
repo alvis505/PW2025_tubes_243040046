@@ -72,6 +72,12 @@ if (isset($_POST["submit"])) {
         </tr>
 
         <tr>
+            <td><label for="des">des</label></td>
+            <td><input type="text" name="des" id="des" value="<?= $mhs["des"]?>"></td>
+        </tr>
+        
+
+        <tr>
             <td>
                 <button type="submit" name="submit">update data</button>
             </td>

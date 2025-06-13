@@ -53,7 +53,7 @@ if (isset($_POST["search"])) {
 
     <h1>ART</h1>
 
-    <a href="insert.php" class="text-warning bg-white"><i class="bi bi-database-add text-warning"></i></a>
+    <a href="insert.php" class="text-success bg-white">add data  <i class="bi bi-plus-circle text-success"></i></a>
     <br><br>
 
     <!-- SEARCH -//////////////////////////////////////////////////////////////////-->
@@ -99,7 +99,7 @@ if (isset($_POST["search"])) {
         <?php $i = 1;?>
         <?php foreach($arts as $art) : ?>
             <tr>
-                <td> <?= $i++ ; ?> </td>
+                <td> <?= $art["id"];?> </td>
                 <td> 
                     <a href="update.php?id=<?= $art["id"];?>"> <i class="bi bi-pencil-square"></i> </a> |
                     <a href="delete.php?id=<?= $art["id"];?>" onclick="return confirm('Are you sure want delete this data?');"> <i class="bi bi-trash"></i>  </a>

@@ -25,8 +25,10 @@ function add($data) {
         return false;
     }
 
-    $query = "INSERT INTO art (id, name, date, image) 
-              VALUES (NULL, '$name', '$date', '$image')";
+    $des = htmlspecialchars($data["des"]);
+
+    $query = "INSERT INTO art (id, name, date, image, des) 
+              VALUES (NULL, '$name', '$date', '$image', '$des')";
 
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
