@@ -57,7 +57,7 @@ if(isset($_POST["login"])) {
                 // username perlu di hash/acak agar lebih safety
             }
 
-            if ($username == 'miminjeruk' && $password == '123') {
+            if ($username == 'admin' && $password == '123') {
               header("Location: admin.php");
               exit;
             }
