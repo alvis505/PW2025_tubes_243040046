@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: pw2025
-    env: php
-    plan: free
-    buildCommand: ""
-    startCommand: ""
-    rootDir: public
